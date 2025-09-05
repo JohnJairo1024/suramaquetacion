@@ -1,16 +1,14 @@
 <!-- Header -->
-<header class="header-blue flex align-items-center justify-content-between px-4">
-  <div class="flex align-items-center">
-    <i class="pi pi-bars text-white mr-3" style="font-size: 20px; cursor: pointer;"></i>
-    <div class="sura-logo">sura</div>
-  </div>
-  <div class="flex align-items-center gap-3">
-    <button class="btn-create-header">
-      <i class="pi pi-plus mr-2"></i>
-      <span>Crear</span>
-    </button>
-    <div class="user-avatar">
-      <i class="pi pi-user" style="font-size: 16px;"></i>
+<header class="header-blue">
+  <div class="header-content">
+    <div class="header-left">
+      <i class="pi pi-bars hamburger-icon"></i>
+      <div class="sura-logo">sura</div>
+    </div>
+    <div class="header-right">
+      <div class="user-avatar">
+        <i class="pi pi-user"></i>
+      </div>
     </div>
   </div>
 </header>
@@ -27,30 +25,26 @@
   </div>
 
   <!-- Page Title -->
-  <div class="flex justify-content-between align-items-center mb-4">
+  <div class="page-title-section">
     <h1 class="page-title">Administración de convenios</h1>
     <button class="create-button">
-      <i class="pi pi-plus mr-2"></i>
+      <i class="pi pi-plus"></i>
       Crear
     </button>
   </div>
 
   <!-- Search Section -->
   <div class="search-section">
-    <div class="grid">
-      <div class="col-12 md:col-4">
+    <div class="search-grid">
+      <div class="search-row">
         <div class="form-field">
           <label>ID Convenio</label>
           <input type="text" pInputText [(ngModel)]="searchForm.idConvenio" placeholder="12345678">
         </div>
-      </div>
-      <div class="col-12 md:col-4">
         <div class="form-field">
           <label>Nombre del convenio</label>
           <input type="text" pInputText [(ngModel)]="searchForm.nombreConvenio" placeholder="Nombre por default precargado">
         </div>
-      </div>
-      <div class="col-12 md:col-4">
         <div class="form-field">
           <label>Estado del convenio</label>
           <p-dropdown
@@ -62,7 +56,7 @@
           </p-dropdown>
         </div>
       </div>
-      <div class="col-12 md:col-4">
+      <div class="search-row">
         <div class="form-field">
           <label>Compañía</label>
           <p-dropdown
@@ -73,18 +67,16 @@
             optionValue="value">
           </p-dropdown>
         </div>
-      </div>
-      <div class="col-12 md:col-4">
         <div class="form-field">
           <label>ID Cliente<span class="required">*</span></label>
           <input type="text" pInputText [(ngModel)]="searchForm.idCliente" placeholder="12345678">
         </div>
-      </div>
-      <div class="col-12 md:col-4 flex align-items-end">
-        <button class="consult-button w-full">
-          <i class="pi pi-search mr-2"></i>
-          Consultar
-        </button>
+        <div class="form-field consult-field">
+          <button class="consult-button">
+            <i class="pi pi-search"></i>
+            Consultar
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -95,88 +87,91 @@
 
     <!-- Table Controls -->
     <div class="table-controls">
-      <div class="flex align-items-center gap-2">
+      <div class="controls-row">
         <button class="control-button">
-          <i class="pi pi-list mr-2"></i>
+          <i class="pi pi-list"></i>
           Columnas
-          <i class="pi pi-angle-down ml-2"></i>
+          <i class="pi pi-angle-down"></i>
         </button>
         <button class="control-button">
-          <i class="pi pi-times mr-2"></i>
+          <i class="pi pi-times"></i>
           Limpiar filtros
         </button>
         <button class="control-button">
-          <i class="pi pi-download mr-2"></i>
+          <i class="pi pi-download"></i>
           Exportar
         </button>
       </div>
     </div>
 
     <!-- Data Table -->
-    <p-table
-      [value]="convenios"
-      [paginator]="true"
-      [rows]="10"
-      [showCurrentPageReport]="true"
-      currentPageReportTemplate="Mostrar {first} - {last} de {totalRecords} filas"
-      [rowsPerPageOptions]="[10, 25, 50]"
-      responsiveLayout="scroll">
+    <div class="table-container">
+      <p-table
+        [value]="convenios"
+        [paginator]="true"
+        [rows]="10"
+        [showCurrentPageReport]="true"
+        currentPageReportTemplate="Mostrar {first} - {last} de {totalRecords} filas"
+        [rowsPerPageOptions]="[10, 25, 50]"
+        responsiveLayout="scroll"
+        styleClass="custom-table">
 
-      <ng-template pTemplate="header">
-        <tr>
-          <th>
-            ID Convenio
-            <i class="pi pi-arrow-down sort-indicator"></i>
-          </th>
-          <th>
-            Nombre del convenio
-            <i class="pi pi-arrow-down sort-indicator"></i>
-          </th>
-          <th>
-            Compañía
-            <i class="pi pi-arrow-down sort-indicator"></i>
-          </th>
-          <th>
-            ID Cliente
-            <i class="pi pi-arrow-down sort-indicator"></i>
-          </th>
-          <th>
-            Forma de pago
-            <i class="pi pi-arrow-down sort-indicator"></i>
-          </th>
-          <th>
-            ID Cliente
-            <i class="pi pi-arrow-down sort-indicator"></i>
-          </th>
-          <th style="width: 50px;"></th>
-        </tr>
-      </ng-template>
+        <ng-template pTemplate="header">
+          <tr>
+            <th>
+              ID Convenio
+              <i class="pi pi-sort-alt sort-indicator"></i>
+            </th>
+            <th>
+              Nombre del convenio
+              <i class="pi pi-sort-alt sort-indicator"></i>
+            </th>
+            <th>
+              Compañía
+              <i class="pi pi-sort-alt sort-indicator"></i>
+            </th>
+            <th>
+              ID Cliente
+              <i class="pi pi-sort-alt sort-indicator"></i>
+            </th>
+            <th>
+              Forma de pago
+              <i class="pi pi-sort-alt sort-indicator"></i>
+            </th>
+            <th>
+              ID Cliente
+              <i class="pi pi-sort-alt sort-indicator"></i>
+            </th>
+            <th class="actions-column"></th>
+          </tr>
+        </ng-template>
 
-      <ng-template pTemplate="body" let-convenio>
-        <tr>
-          <td>{{convenio.idConvenio}}</td>
-          <td>{{convenio.nombreConvenio}}</td>
-          <td>{{convenio.compania}}</td>
-          <td>{{convenio.idCliente}}</td>
-          <td>{{convenio.formaPago}}</td>
-          <td>{{convenio.idCliente2}}</td>
-          <td>
-            <div class="options-menu">
-              <button class="menu-trigger" (click)="showMenu($event, op)">
-                <i class="pi pi-ellipsis-v"></i>
-              </button>
-              <p-overlayPanel #op>
-                <div class="p-2">
-                  <button class="p-button-text p-button-sm w-full text-left" style="justify-content: flex-start;">
-                    Ver/Editar
-                  </button>
-                </div>
-              </p-overlayPanel>
-            </div>
-          </td>
-        </tr>
-      </ng-template>
-    </p-table>
+        <ng-template pTemplate="body" let-convenio let-rowIndex="rowIndex">
+          <tr>
+            <td>{{convenio.idConvenio}}</td>
+            <td>{{convenio.nombreConvenio}}</td>
+            <td>{{convenio.compania}}</td>
+            <td>{{convenio.idCliente}}</td>
+            <td>{{convenio.formaPago}}</td>
+            <td>{{convenio.idCliente2}}</td>
+            <td class="actions-column">
+              <div class="options-menu">
+                <button class="menu-trigger" (click)="showMenu($event, op)">
+                  <i class="pi pi-ellipsis-v"></i>
+                </button>
+                <p-overlayPanel #op>
+                  <div class="overlay-content">
+                    <button class="overlay-button">
+                      Ver/Editar
+                    </button>
+                  </div>
+                </p-overlayPanel>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
   </div>
 </div>
 

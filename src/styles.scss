@@ -10,36 +10,47 @@
 
 /* Custom Styles */
 .header-blue {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  height: 60px;
+  background: #1976d2;
+  height: 64px;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 24px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hamburger-icon {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .sura-logo {
   color: white;
   font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 2px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-.btn-create-header {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-create-header:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.5);
+.header-right {
+  display: flex;
+  align-items: center;
 }
 
 .user-avatar {
   width: 40px;
   height: 40px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -50,22 +61,50 @@
 }
 
 .user-avatar:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.user-avatar i {
+  font-size: 18px;
+}
+
+/* Main Content */
+.px-4 {
+  padding: 0 24px;
+}
+
+.py-3 {
+  padding: 24px 0;
 }
 
 .breadcrumb-custom {
   color: #6c757d;
   font-size: 14px;
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
 }
 
 .breadcrumb-custom a {
-  color: #007bff;
+  color: #1976d2;
   text-decoration: none;
+  margin-right: 8px;
 }
 
 .breadcrumb-custom a:hover {
   text-decoration: underline;
+}
+
+.breadcrumb-custom i {
+  margin: 0 8px;
+  font-size: 12px;
+}
+
+.page-title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
 .page-title {
@@ -76,19 +115,29 @@
 }
 
 .create-button {
-  background: #007bff;
-  color: white;
+  background: #ffc107;
+  color: #333;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .create-button:hover {
-  background: #0056b3;
+  background: #ffb300;
   transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.create-button i {
+  font-size: 16px;
 }
 
 .search-section {
@@ -99,8 +148,22 @@
   border: 1px solid #e9ecef;
 }
 
+.search-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.search-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  align-items: end;
+}
+
 .form-field {
-  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-field label {
@@ -108,6 +171,7 @@
   margin-bottom: 6px;
   font-weight: 500;
   color: #495057;
+  font-size: 14px;
 }
 
 .form-field .required {
@@ -115,20 +179,35 @@
   margin-left: 2px;
 }
 
+.consult-field {
+  display: flex;
+  align-items: flex-end;
+}
+
 .consult-button {
-  background: #28a745;
+  background: #1976d2;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
 }
 
 .consult-button:hover {
-  background: #218838;
+  background: #1565c0;
   transform: translateY(-1px);
+}
+
+.consult-button i {
+  font-size: 16px;
 }
 
 .convenios-section {
@@ -151,6 +230,12 @@
   border-bottom: 1px solid #e9ecef;
 }
 
+.controls-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .control-button {
   background: #6c757d;
   color: white;
@@ -159,7 +244,9 @@
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
-  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   transition: all 0.3s ease;
 }
 
@@ -168,13 +255,33 @@
   transform: translateY(-1px);
 }
 
+.control-button i {
+  font-size: 14px;
+}
+
+/* Table Styles */
+.table-container {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .sort-indicator {
   margin-left: 8px;
   opacity: 0.6;
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.actions-column {
+  width: 60px;
+  text-align: center;
 }
 
 .options-menu {
   position: relative;
+  display: inline-block;
 }
 
 .menu-trigger {
@@ -184,46 +291,128 @@
   padding: 8px;
   border-radius: 4px;
   transition: all 0.3s ease;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
 }
 
 .menu-trigger:hover {
   background: #f8f9fa;
+  color: #495057;
+}
+
+.menu-trigger i {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.overlay-content {
+  padding: 4px;
+  min-width: 120px;
+}
+
+.overlay-button {
+  background: none;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  color: #495057;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.overlay-button:hover {
+  background: #f8f9fa;
+  color: #1976d2;
+}
+
+.overlay-button:before {
+  content: "👁️";
+  font-size: 14px;
 }
 
 /* PrimeNG Table Customizations */
-:host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+:host ::ng-deep .custom-table .p-datatable .p-datatable-thead > tr > th {
   background: #f8f9fa;
   color: #495057;
   font-weight: 600;
   border-bottom: 2px solid #dee2e6;
+  padding: 16px 12px;
+  font-size: 14px;
 }
 
-:host ::ng-deep .p-datatable .p-datatable-tbody > tr > td {
-  padding: 12px;
+:host ::ng-deep .custom-table .p-datatable .p-datatable-tbody > tr > td {
+  padding: 16px 12px;
   border-bottom: 1px solid #e9ecef;
+  font-size: 14px;
+  color: #495057;
 }
 
-:host ::ng-deep .p-datatable .p-datatable-tbody > tr:hover {
+:host ::ng-deep .custom-table .p-datatable .p-datatable-tbody > tr:hover {
   background: #f8f9fa;
 }
 
-:host ::ng-deep .p-paginator {
+:host ::ng-deep .custom-table .p-datatable .p-datatable-tbody > tr:nth-child(even) {
+  background: #fafafa;
+}
+
+:host ::ng-deep .custom-table .p-datatable .p-datatable-tbody > tr:nth-child(even):hover {
+  background: #f0f0f0;
+}
+
+:host ::ng-deep .custom-table .p-paginator {
   background: #f8f9fa;
   border-top: 1px solid #dee2e6;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+:host ::ng-deep .custom-table .p-paginator .p-paginator-pages .p-paginator-page {
+  min-width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin: 0 2px;
+  border: 1px solid #dee2e6;
+  background: white;
+  color: #495057;
+}
+
+:host ::ng-deep .custom-table .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: #1976d2;
+  color: white;
+  border-color: #1976d2;
+}
+
+:host ::ng-deep .custom-table .p-paginator .p-dropdown {
+  width: 80px;
+  margin-left: 16px;
 }
 
 /* Form Input Styling */
 :host ::ng-deep .p-inputtext {
   width: 100%;
-  padding: 8px 12px;
+  padding: 10px 12px;
   border: 1px solid #ced4da;
   border-radius: 4px;
   font-size: 14px;
+  background: white;
 }
 
 :host ::ng-deep .p-inputtext:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: #1976d2;
+  box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.25);
+  outline: none;
 }
 
 :host ::ng-deep .p-dropdown {
@@ -231,5 +420,34 @@
 }
 
 :host ::ng-deep .p-dropdown .p-dropdown-label {
-  padding: 8px 12px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+:host ::ng-deep .p-dropdown .p-dropdown-trigger {
+  width: 40px;
+}
+
+/* Overlay Panel Styles */
+:host ::ng-deep .p-overlaypanel {
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: white;
+}
+
+:host ::ng-deep .p-overlaypanel .p-overlaypanel-content {
+  padding: 0;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
 }
