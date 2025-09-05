@@ -54,6 +54,11 @@ export class AppComponent {
     }
   ];
 
+  /**
+   * Muestra/oculta el panel de opciones por fila de la tabla.
+   * Se usa para abrir el p-overlayPanel al hacer clic en el botón de tres puntos.
+   * No altera la información del convenio; solo controla la visibilidad del overlay.
+   */
   showMenu(event: Event, overlayPanel: any) {
     overlayPanel.toggle(event);
   }

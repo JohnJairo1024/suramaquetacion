@@ -26,3 +26,4 @@ import {ChipsModule} from "primeng/chips";
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

@@ -10,48 +10,17 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
   background-color: #f8f9fa;
   color: #333;
 }
 
-/* Custom styles for exact replication */
-.header-blue {
-  background: linear-gradient(135deg, #4285f4 0%, #3367d6 100%);
-  height: 64px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.sura-logo {
-  color: white;
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-.user-avatar {
-  width: 40px;
-  height: 40px;
-  background: rgba(255,255,255,0.2);
-  border: 2px solid rgba(255,255,255,0.3);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.user-avatar:hover {
-  background: rgba(255,255,255,0.3);
-  border-color: rgba(255,255,255,0.5);
-}
-
+/* Migas de pan */
 .breadcrumb-custom {
   padding: 16px 0;
   color: #6c757d;
   font-size: 14px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .breadcrumb-custom a {
@@ -63,36 +32,43 @@ body {
   text-decoration: underline;
 }
 
+/* Título */
 .page-title {
-  font-size: 32px;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
+/* Botón Crear */
 .create-button {
-  background: linear-gradient(135deg, #c6e91f 0%, #b8d91e 100%);
-  border: none;
-  color: #333;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  color: #374151;
   font-weight: 600;
-  height: 44px;
-  padding: 0 24px;
+  height: 40px;
+  padding: 0 16px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .create-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  background: #e5e7eb;
+  border-color: #9ca3af;
 }
 
+/* Panel de filtros */
 .search-section {
   background: white;
   border-radius: 12px;
   padding: 24px;
   margin-bottom: 24px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .form-field {
@@ -102,52 +78,57 @@ body {
 .form-field label {
   display: block;
   margin-bottom: 8px;
-  font-weight: 500;
-  color: #555;
+  font-weight: 600;
+  color: #374151;
   font-size: 14px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .p-inputtext, .p-dropdown {
   width: 100%;
   border-radius: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid #d1d5db;
   height: 44px;
+  background: #fff;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .p-inputtext:focus, .p-dropdown:not(.p-disabled).p-focus {
-  border-color: #4285f4;
-  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
+/* Botón Consultar */
 .consult-button {
-  background: linear-gradient(135deg, #4285f4 0%, #3367d6 100%);
+  background: #3b82f6;
   border: none;
   color: white;
-  font-weight: 600;
+  font-weight: 700;
   height: 44px;
   padding: 0 32px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .consult-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  background: #2563eb;
 }
 
+/* Sección tabla */
 .convenios-section {
   background: white;
   border-radius: 12px;
   padding: 24px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .section-title {
-  font-size: 24px;
-  font-weight: 600;
-  color: #4285f4;
-  margin-bottom: 24px;
+  font-size: 18px;
+  color: #3b82f6;
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .table-controls {
@@ -161,73 +142,102 @@ body {
 
 .control-button {
   background: white;
-  border: 1px solid #ddd;
-  color: #666;
+  border: 1px solid #e5e7eb;
+  color: #374151;
   height: 36px;
   padding: 0 16px;
   border-radius: 6px;
   font-size: 14px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .control-button:hover {
-  border-color: #4285f4;
-  color: #4285f4;
+  border-color: #3b82f6;
+  color: #3b82f6;
 }
 
-.p-datatable .p-datatable-header {
-  background: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 8px 8px 0 0;
-  padding: 12px;
-}
-
+/* Tabla PrimeNG */
 .p-datatable .p-datatable-thead > tr > th {
-  background: #f8f9fa;
-  color: #555;
-  font-weight: 600;
-  padding: 16px 12px;
-  border-color: #e9ecef;
+  background: #fff;
+  color: #4b5563;
+  font-weight: 700;
+  padding: 14px 12px;
+  border-color: #e5e7eb;
   font-size: 14px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .p-datatable .p-datatable-tbody > tr > td {
-  padding: 16px 12px;
-  border-color: #e9ecef;
+  padding: 14px 12px;
+  border-color: #e5e7eb;
   font-size: 14px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .p-datatable .p-datatable-tbody > tr:hover {
-  background: #f8f9fa;
+  background: #f9fafb;
 }
 
+/* Icono de ordenamiento */
+.sort-indicator {
+  margin-left: 6px;
+  font-size: 12px;
+  color: #3b82f6;
+  vertical-align: middle;
+}
+
+/* Paginador */
 .p-paginator {
   background: white;
   border: none;
   padding: 16px 0;
   justify-content: center;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-.options-menu {
-  position: relative;
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: #3b82f6;
+  border-color: #3b82f6;
 }
+
+/* Menú de opciones */
+.options-menu { position: relative; }
 
 .menu-trigger {
   background: none;
   border: none;
-  color: #666;
+  color: #6b7280;
   font-size: 18px;
   padding: 8px;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .menu-trigger:hover {
-  background: #f0f0f0;
-  color: #333;
+  background: #f3f4f6;
+  color: #374151;
 }
 
 .required {
-  color: #e74c3c;
+  color: #e11d48;
+}
+
+/* Aplicar fuente sans-serif moderna globalmente */
+*, *::before, *::after {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif !important;
+}
+
+/* Asegurar que PrimeNG también use la fuente moderna */
+.p-component {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+.p-dropdown-label,
+.p-inputtext,
+.p-button,
+.p-datatable,
+.p-paginator {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
