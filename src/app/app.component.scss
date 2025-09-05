@@ -1,0 +1,233 @@
+@import 'primeng/resources/themes/lara-light-blue/theme.css';
+@import 'primeng/resources/primeng.css';
+@import 'primeicons/primeicons.css';
+@import 'primeflex/primeflex.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Custom styles for exact replication */
+.header-blue {
+  background: linear-gradient(135deg, #4285f4 0%, #3367d6 100%);
+  height: 64px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sura-logo {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-avatar:hover {
+  background: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.breadcrumb-custom {
+  padding: 16px 0;
+  color: #6c757d;
+  font-size: 14px;
+}
+
+.breadcrumb-custom a {
+  color: #4285f4;
+  text-decoration: none;
+}
+
+.breadcrumb-custom a:hover {
+  text-decoration: underline;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.create-button {
+  background: linear-gradient(135deg, #c6e91f 0%, #b8d91e 100%);
+  border: none;
+  color: #333;
+  font-weight: 600;
+  height: 44px;
+  padding: 0 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.create-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.search-section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+  font-size: 14px;
+}
+
+.p-inputtext, .p-dropdown {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  height: 44px;
+}
+
+.p-inputtext:focus, .p-dropdown:not(.p-disabled).p-focus {
+  border-color: #4285f4;
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.1);
+}
+
+.consult-button {
+  background: linear-gradient(135deg, #4285f4 0%, #3367d6 100%);
+  border: none;
+  color: white;
+  font-weight: 600;
+  height: 44px;
+  padding: 0 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.consult-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.convenios-section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #4285f4;
+  margin-bottom: 24px;
+}
+
+.table-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.control-button {
+  background: white;
+  border: 1px solid #ddd;
+  color: #666;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.control-button:hover {
+  border-color: #4285f4;
+  color: #4285f4;
+}
+
+.p-datatable .p-datatable-header {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px 8px 0 0;
+  padding: 12px;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background: #f8f9fa;
+  color: #555;
+  font-weight: 600;
+  padding: 16px 12px;
+  border-color: #e9ecef;
+  font-size: 14px;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+  padding: 16px 12px;
+  border-color: #e9ecef;
+  font-size: 14px;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+  background: #f8f9fa;
+}
+
+.p-paginator {
+  background: white;
+  border: none;
+  padding: 16px 0;
+  justify-content: center;
+}
+
+.options-menu {
+  position: relative;
+}
+
+.menu-trigger {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-trigger:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.required {
+  color: #e74c3c;
+}
