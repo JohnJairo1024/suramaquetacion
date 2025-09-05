@@ -1,1 +1,235 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* PrimeNG Styles */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+/* PrimeFlex */
+@import "primeflex/primeflex.css";
+
+/* Custom Styles */
+.header-blue {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  height: 60px;
+}
+
+.sura-logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.btn-create-header {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-create-header:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.user-avatar:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumb-custom {
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.breadcrumb-custom a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumb-custom a:hover {
+  text-decoration: underline;
+}
+
+.page-title {
+  color: #333;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.create-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.create-button:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+.search-section {
+  background: #f8f9fa;
+  padding: 24px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border: 1px solid #e9ecef;
+}
+
+.form-field {
+  margin-bottom: 16px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.form-field .required {
+  color: #dc3545;
+  margin-left: 2px;
+}
+
+.consult-button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.consult-button:hover {
+  background: #218838;
+  transform: translateY(-1px);
+}
+
+.convenios-section {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+.table-controls {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.control-button {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 8px;
+  transition: all 0.3s ease;
+}
+
+.control-button:hover {
+  background: #5a6268;
+  transform: translateY(-1px);
+}
+
+.sort-indicator {
+  margin-left: 8px;
+  opacity: 0.6;
+}
+
+.options-menu {
+  position: relative;
+}
+
+.menu-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.menu-trigger:hover {
+  background: #f8f9fa;
+}
+
+/* PrimeNG Table Customizations */
+:host ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+  background: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  border-bottom: 2px solid #dee2e6;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+  padding: 12px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+:host ::ng-deep .p-datatable .p-datatable-tbody > tr:hover {
+  background: #f8f9fa;
+}
+
+:host ::ng-deep .p-paginator {
+  background: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+/* Form Input Styling */
+:host ::ng-deep .p-inputtext {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+:host ::ng-deep .p-inputtext:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+:host ::ng-deep .p-dropdown {
+  width: 100%;
+}
+
+:host ::ng-deep .p-dropdown .p-dropdown-label {
+  padding: 8px 12px;
+}
